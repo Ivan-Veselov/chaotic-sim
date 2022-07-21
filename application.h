@@ -19,9 +19,16 @@ private:
     void initWindow();
     void termWindow();
 
+    void initVulkan();
+    void termVulkan();
+
+    void createVulkanInstance();
+    void destroyVulkanInstance();
+
 private:
     constexpr static uint32_t WINDOW_WIDTH = 800;
     constexpr static uint32_t WINDOW_HEIGHT = 600;
 
     GLFWwindow* window;
+    VkInstance instance;
 };
